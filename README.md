@@ -24,14 +24,15 @@ D. 1937
 
 "
 ## Output File Format
-Which of the following was elected as the temporary president of the Constituent Assembly?
+In Which year, did the Indian National Congress(INC) for the first time demand a Constituent Assembly?
 
-A. Dr. Rajendra Prasad
+A. 1934
 
-B. Jawahar Lal Nehru
+B. 1935
 
-C. H C Mukherjee
+C. 1936
 
-D. Dr. Sachchidanad Sinha
+D. 1937
 
-**Correct Option : D**
+
+**Correct Option : B. 1935**
