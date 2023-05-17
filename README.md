@@ -11,6 +11,7 @@ Solves docx filled with MCQs using GPT-3.5-Turbo and generates a solved docx.
 It must be a .docx file in which each question is enclosed in double quotes.
 
 For example,
+
 "
 In Which year, did the Indian National Congress(INC) for the first time demand a Constituent Assembly?
 
@@ -21,7 +22,6 @@ B. 1935
 C. 1936
 
 D. 1937
-
 "
 ## Output File Format
 In Which year, did the Indian National Congress(INC) for the first time demand a Constituent Assembly?
