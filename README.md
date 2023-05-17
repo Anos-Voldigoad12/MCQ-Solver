@@ -13,6 +13,7 @@ It must be a .docx file in which each question is enclosed in double quotes.
 For example,
 
 "
+
 In Which year, did the Indian National Congress(INC) for the first time demand a Constituent Assembly?
 
 A. 1934
@@ -22,6 +23,7 @@ B. 1935
 C. 1936
 
 D. 1937
+
 "
 ## Output File Format
 In Which year, did the Indian National Congress(INC) for the first time demand a Constituent Assembly?
