@@ -20,7 +20,6 @@ def get_completion(prompt, model="gpt-3.5-turbo"):
     response = openai.ChatCompletion.create(
         model=model,
         messages=messages,
-        max_tokens=3000,
         n=1,
         stop=None,
         temperature=0, # this is the degree of randomness of the model's output
@@ -37,8 +36,10 @@ def solveDocx(docxName):
             prompt = f"""
             You will be provided with a list of questions.\
             Find out the correct answer to each question\
-            (Correct option along with the answer)\
-            and output them in a python list.
+            (Each element is a string containing Correct option\
+            along with the option value)\
+            and output them in a python list.\
+            [Do not include the question]
 
             {questions[i:i+10]}
             """
