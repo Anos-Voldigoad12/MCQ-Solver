@@ -31,13 +31,14 @@ def solveDocx(docxName):
     text = str(textract.process("./unsolved/"+docxName))
     questions = re.findall(r'"(.+?)"',text)
     questions = [ x.strip() for x in questions ]
-    responses = []
+    responses = list()
     try:
         for i in range(0,len(questions),10):
             prompt = f"""
             You will be provided with a list of questions.\
-            Find out the correct answer to each question and output them in a\
-            python list.
+            Find out the correct answer to each question\
+            (Correct option along with the answer)\
+            and output them in a python list.
 
             {questions[i:i+10]}
             """
@@ -47,7 +48,7 @@ def solveDocx(docxName):
             for x in range(len(result)):
                 temp['question'] = eval("f'{}'".format(questions[i+x].strip()))
                 temp['correct_answer'] = result[x]
-                responses.append(temp)
+                responses.append(temp.copy())
             print(f"Set-%d completed!"%((i/10)+1))
             time.sleep(30)
     finally:
@@ -69,9 +70,9 @@ def ouputToDocx(temp,outputName):
 
 
 #DRIVER
-#setup()
+setup()
 docxName = input("Input File Name(with extension): ")
-#solveDocx(docxName)
+solveDocx(docxName)
 outputName = input("Output File Name(without extension): ")
 ouputToDocx(docxName.split('.')[0]+'.json',outputName)
 
